@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    name: mybatis_plus
+    url: jdbc:mysql://localhost:3306/mybatispuls_study?serverTimezone=UTC&characterEncoding=utf8&useSSL=false
+    username: root
+    password: hznu1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.sqw.mybatisplus.entity # 注意：对应实体类的路径
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印mybatis-plus的sql语句
